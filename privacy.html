@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Hatch</title>
+  <style>
+  :root { color-scheme: light dark; --bg:#FAFAF9; --surface:#FFFFFF; --border:#E3E2DF; --ink:#0C0B0A; --muted:#57544F; --accent:#4866CA; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0A0A09; --surface:#1A1A18; --border:#33322F; --ink:#F7F6F4; --muted:#ADAAA5; --accent:#8399E2; } }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:2.5rem 1.25rem 5rem; background:var(--bg); color:var(--ink); font:16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  main { max-width:44rem; margin:0 auto; background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:2.5rem; }
+  h1 { font-size:2rem; line-height:1.2; margin:0 0 .25rem; letter-spacing:-.02em; }
+  .meta { color:var(--muted); margin:0 0 2rem; }
+  h2 { font-size:1.2rem; margin:2rem 0 .5rem; }
+  p { margin:0 0 1rem; }
+  a { color:var(--accent); }
+  footer { max-width:44rem; margin:2rem auto 0; color:var(--muted); font-size:.9rem; text-align:center; }
+</style>
+</head>
+<body>
+  <main>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Hatch · Effective 7 September 2026</p>
+      <h2>What this policy covers</h2>
+      <p>This policy explains what Hatch stores, where it stores it, and what it never does with it. It is written to be read, not filed.</p>
+      <p>It describes the app as it actually behaves. Where it says nothing leaves your device, that is a statement about how the app is built, not a promise about how it is used.</p>
+      <p>It applies to the Hatch app on iOS and Android, and to the copies of these pages published on the web. &quot;We&quot; means the developer of Hatch, reachable at the support address at the end of this policy; &quot;you&quot; means the person using the app.</p>
+      <h2>The short version</h2>
+      <p>There is no account, no server of ours, and no analytics. Everything you put into Hatch is encrypted on your phone and stays on your phone. We receive nothing, so there is nothing we can look at, sell, lose in a breach, or hand to anyone else.</p>
+      <p>The rest of this policy is the same statement, said precisely enough to be checked.</p>
+      <h2>What we collect</h2>
+      <p>Nothing. There is no account to create, no server to sign in to, and no analytics, crash reporting or advertising code in the app.</p>
+      <p>Everything you put into the vault — photos, videos, files, notes and passwords — is encrypted on the device before it is written to storage, and the keys are held in the device's own secure hardware. We never receive any of it, because there is nowhere for it to be sent.</p>
+      <p>Your preferences (theme, language, reminders) are stored locally and are deleted when the app is deleted.</p>
+      <h2>What stays on your device</h2>
+      <p>The vault itself: your files, encrypted one record at a time, with names that say nothing about what they hold, and an index of them that is decrypted into memory only while the vault is open.</p>
+      <p>The things that make it work: the wrapped key material, a count of failed unlock attempts and which entrance they came through, and the settings you have chosen. The attempt count sits outside the encrypted index on purpose — a lockout that could only be read after a successful unlock would not be a lockout.</p>
+      <p>Nothing on this list is readable by another app on a device that has not been tampered with, and none of it is registered with the system photo library or media index, so vault contents do not appear in the phone's own gallery, in search, or in a file picker.</p>
+      <h2>Permissions, and what each one is for</h2>
+      <p>The app asks for a permission at the moment a feature needs it, never on first launch as a bundle, and every one of them is optional: the app keeps working without it, minus that feature.</p>
+      <p>Photos: to read the items you pick when importing from your camera roll. Only the ones you choose are read, and location data is stripped before they are encrypted.</p>
+      <p>Camera: only if you take a photo or shoot video into the vault from inside the app. Nothing is captured in the background, and the app never asks for microphone access — it does not record audio at all.</p>
+      <p>Notifications: only if you turn on reminders. Notification text never names an item or shows its contents.</p>
+      <p>Face ID, Touch ID or Android biometrics: to unlock the vault without typing the secret where it can be watched. The check happens in the operating system; the app is told yes or no, and never sees your fingerprint or face.</p>
+      <p>Network access: the app does not ask for it. The Android release build declares no internet permission, so it cannot open a connection even if something inside it tried, and on iOS it makes no requests. The whole app works with the phone in aeroplane mode.</p>
+      <p>You can withdraw any of these in the system settings afterwards. The app will tell you what stopped working rather than failing quietly.</p>
+      <h2>Other companies</h2>
+      <p>There are no third-party SDKs in the app: no analytics, no advertising, no crash reporter, no attribution or &quot;growth&quot; tooling of any kind.</p>
+      <p>Apple and Google still know what their own platforms know — that you downloaded an app, and, if you ever buy something, that a purchase happened. That is between you and them under their privacy policies, and we receive no personal data from either.</p>
+      <p>If you use the system share sheet to send something out of the vault, it leaves under the rules of whichever app you send it to. The app warns you at that point, because that is the one moment where its guarantees end.</p>
+      <h2>What we do not do</h2>
+      <p>We do not sell data. We do not show third-party advertising. We do not track you across other apps or websites. We do not upload the contents of your vault, and the app works with the network switched off.</p>
+      <p>We do not profile you, we do not make automated decisions about you, and we run no server that could receive a request about you in the first place.</p>
+      <h2>How it is protected</h2>
+      <p>Your secret is stretched with Argon2id and never stored. It unwraps a key that is held in the Secure Enclave on iOS or the Android Keystore, and file contents are encrypted with XChaCha20-Poly1305, which also detects any change made to a stored file behind the app's back.</p>
+      <p>That is strong, and it is not magic. It protects the data at rest on a device you still control. It does not protect you from someone who knows your secret, from malware on a rooted or jailbroken phone, or from a person standing next to you while the vault is open. Nothing installed as an ordinary app can, and any app that claims otherwise is selling you something.</p>
+      <h2>How long anything is kept</h2>
+      <p>For as long as you keep it, and no longer. There is no retention schedule to publish, because retention is a thing servers do, and there is no server.</p>
+      <p>Deleting an item removes it from the vault. Deleting the app removes everything the app stored, including the keys. If your phone backs itself up to iCloud or Google, the vault is excluded from that backup, so restoring a new phone does not bring it back — that is deliberate, and it is why the export bundle and the recovery phrase exist.</p>
+      <h2>Your choices</h2>
+      <p>You can delete the vault and everything in it from Settings at any time. That deletion is real: the keys are destroyed and the encrypted data becomes unreadable, including by us.</p>
+      <p>There is a consequence to this design that you should understand before relying on it. Because we hold no keys and no copy of your data, we cannot recover anything for you. If you lose your PIN, password or pattern and also lose the recovery phrase shown when you set the vault up, what is in the vault is gone permanently.</p>
+      <h2>Children</h2>
+      <p>Hatch is not directed at children, and we do not knowingly collect anything from anyone of any age — there is no mechanism in the app that could. It is rated for teenagers and above in both stores, and a parent setting up a child's phone should treat it as they would any other app that keeps things private.</p>
+      <h2>Your rights over your data</h2>
+      <p>Under the GDPR, the UK GDPR, the CCPA and similar laws, you have rights to see, correct, export and delete the personal data a company holds about you. We hold none, so there is nothing for us to show you, and nothing for us to delete.</p>
+      <p>In practice you already exercise those rights directly, without asking us: everything is in front of you in the app, you can edit it, the export bundle gives you a portable copy, and deleting the vault or the app erases it. We are not in the middle of any of it.</p>
+      <p>If you believe we hold personal data about you, write to the support address and we will tell you what we have. The answer will almost certainly be nothing, and we would rather say so than leave you guessing.</p>
+      <h2>Requests from courts and the police</h2>
+      <p>We can only produce what we have, and we have nothing: no account records, no backups, no keys, no way to identify a user, and no ability to reach into an installed copy of the app.</p>
+      <p>This is a property of the design rather than a promise about our conduct, and it is the reason the design is what it is. Note that it says nothing about the phone itself, which its owner or holder may be legally obliged to unlock.</p>
+      <h2>Where this applies</h2>
+      <p>Everywhere the app runs. There are no international data transfers to describe, because there is no transfer of any kind: your data never leaves your device unless you deliberately export or share it.</p>
+      <p>You are responsible for the laws that apply to you where you are, including any that govern the material you keep encrypted.</p>
+      <h2>Changes to this policy</h2>
+      <p>We may update this policy as the app changes. The effective date at the top tells you when it last changed, and a change that materially affects what is stored or asked for will be pointed out in the app rather than published quietly.</p>
+      <p>Continuing to use the app after a change means you accept the updated policy.</p>
+      <h2>Contact</h2>
+      <p>Questions about this policy, about what the app does, or about anything in it that reads as evasive: write to the support address in Settings → Help &amp; support. A question that shows this policy is unclear is worth more to us than one that shows it is thorough.</p>
+  </main>
+  <footer>© 2026 Hatch</footer>
+</body>
+</html>
